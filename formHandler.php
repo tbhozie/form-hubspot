@@ -26,7 +26,7 @@
     if(!empty($honey)) {
         wp_die('No, thanks');
     }
-	if(empty($pageURL)) {
+    if(empty($pageURL)) {
         echo 'Invalid page submission, make sure you are using a browser with JavaScript enabled.';
         exit();
     }
