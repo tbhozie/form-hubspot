@@ -1,7 +1,7 @@
 # form-hubspot
 This include allows you to build forms in WordPress with the Advanced Custom Fields PRO plugin and link those to HubSpot forms through the API. This also creates a button in the WYSIWYG editor of WordPress to easily allow you enter a form wherever you want using a shortcode.
 
-# You must have the advanced custom fields PRO plugin for this work
+# You must have the advanced custom fields PRO plugin for this to work
 
 To setup:
 Go into the formHandler.php file and change your HubSpot portal ID to your portal ID. 
