@@ -3,7 +3,12 @@ This include allows you to build forms in WordPress with the Advanced Custom Fie
 
 ## You must have the advanced custom fields PRO plugin for this to work
 
-To setup:
+### Setup:
+
+Copy all files into a folder named "forms" in your theme folder (example: /wp-content/themes/MYTHEME/forms/)
+
+Go to your functions.php file in your theme and add an include to the forms/forms.php file (example: include get_template_directory() . '/forms/forms.php'; )
+
 Go into the formHandler.php file and change your HubSpot portal ID to your portal ID. 
 
 Next, go to WordPress and create your form through the "Forms" post type. 
