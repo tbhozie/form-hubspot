@@ -22,7 +22,7 @@
     $values = $_POST;
     
 	// Stop some spam
-    $honey = $_POST['company_url'];
+	$honey = $_POST['company_url'];
     if(!empty($honey)) {
         wp_die('No, thanks');
     }
@@ -44,7 +44,7 @@
         $results .= $key.'='.urlencode($value).'&';
     }
     
-    // Replace your portal ID here with your hubspot portal ID
+	// Replace your portal ID here with your hubspot portal ID
 	$portalID = 'REPLACE_PORTAL_ID';
     $endpoint = 'https://forms.hubspot.com/uploads/form/v2/'.$portalID.'/'.$formGUID;
     
