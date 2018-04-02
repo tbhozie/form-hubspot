@@ -6,8 +6,8 @@
     $pageTitle = $_POST['page_title'];
     $redirectURL = get_field('redirect_url', $formID);
 	
-	// Hubspot
-	$hubspotutk      = $_COOKIE['hubspotutk']; //grab the cookie from the visitors browser.
+    // Hubspot
+    $hubspotutk      = $_COOKIE['hubspotutk']; //grab the cookie from the visitors browser.
     $ip_addr         = $_SERVER['REMOTE_ADDR']; //IP address too.
     $hs_context      = array(
         'hutk' => $hubspotutk,
@@ -21,8 +21,8 @@
     // Fields
     $values = $_POST;
     
-	// Stop some spam
-	$honey = $_POST['company_url'];
+    // Stop some spam
+    $honey = $_POST['company_url'];
     if(!empty($honey)) {
         wp_die('No, thanks');
     }
@@ -31,7 +31,7 @@
         exit();
     }
     
-	// Basic form validation server side - feel free to add more here, but I really only care about an e-mail address
+    // Basic form validation server side - feel free to add more here, but I really only care about an e-mail address
     $email = $values['email'];
     if (empty($email)) {
         echo 'Email is required, please return to the form and input an e-mail address';
@@ -44,8 +44,8 @@
         $results .= $key.'='.urlencode($value).'&';
     }
     
-	// Replace your portal ID here with your hubspot portal ID
-	$portalID = 'REPLACE_PORTAL_ID';
+    // Replace your portal ID here with your hubspot portal ID
+    $portalID = 'REPLACE_PORTAL_ID';
     $endpoint = 'https://forms.hubspot.com/uploads/form/v2/'.$portalID.'/'.$formGUID;
     
     $ch = @curl_init();
